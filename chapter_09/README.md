@@ -1,6 +1,6 @@
 # Chapter 9: Model Optimization and Deployment
 
-This directory contains the code listings for Chapter 9, focusing on model quantization, optimization, and serving using various tools and frameworks.
+This directory contains the code listings for Chapter 9, focusing on the full deployment pipeline for local and edge inference: from preparing your fine-tuned weights for distribution and usage, through choosing the best quantization format to compress them, to selecting and configuring the inference engine, using various tools and frameworks, that will serve your models locally.
 
 ## Notebooks Overview
 

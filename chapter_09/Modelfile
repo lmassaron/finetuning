@@ -1,0 +1,9 @@
+FROM ./llama.cpp/merged-model-Q4_K_M.gguf
+
+TEMPLATE "[INST] {{ .System }} {{ .Prompt }} [/INST]"
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+SYSTEM "You are a specialized assistant for medical triage. Answer concisely and always recommend consulting a physician for diagnosis."

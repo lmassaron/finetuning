@@ -16,7 +16,7 @@ echo "==> Creating venv: ch09 (Python 3.12)"
 uv venv .venv_ch09 --python 3.12
 source .venv_ch09/bin/activate
 
-uv pip install torch torchvision
+uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130 || uv pip install torch torchvision
 uv pip install jupyter ipykernel
 uv pip install transformers peft
 uv pip install vllm openai ollama

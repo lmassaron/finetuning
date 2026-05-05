@@ -3,7 +3,7 @@
 # --- Chapter 9 Environment Setup Script ---
 
 set -euo pipefail
-
+git 
 # ── 1. Ensure uv is available ──────────────────────────────────────────────────
 echo "==> Checking uv..."
 if ! command -v uv &> /dev/null; then
@@ -16,6 +16,6 @@ echo "==> Creating venv: ch09 AutoGPT (Python 3.12)"
 uv venv .venv_ch09_autoawq --python 3.12
 source .venv_ch09_autoawq/bin/activate
 
-uv pip install torch==2.6.0 torchvision
+uv pip install torch torchvision protobuf
 uv pip install jupyter ipykernel
-uv pip install autoawq transformers==4.51.3
+uv pip install autoawq transformers

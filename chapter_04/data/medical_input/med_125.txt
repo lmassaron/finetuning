@@ -1,0 +1,1 @@
+Cardiac resynchronization therapy (Technology) : Several research papers have proposed software platforms for planning and guiding the implantation of CRT devices. This research proposes using pre-operative images to characterize tissue and left ventricle activation to identify potential target regions for deploying the CRT leads. == References ==

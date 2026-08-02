@@ -1,0 +1,1 @@
+Natural pacemaker (Generation of action potentials) : There are three main stages in the generation of an action potential in a pacemaker cell. Since the stages are analogous to contraction of cardiac muscle cells, they have the same naming system. This can lead to some confusion as phases one and two are absent, leaving only phases zero, three, and four.

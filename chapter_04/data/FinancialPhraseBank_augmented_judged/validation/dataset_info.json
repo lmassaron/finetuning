@@ -1,0 +1,64 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "financial_phrase_bank_augmented_judged",
+  "dataset_size": 6139453,
+  "description": "",
+  "download_size": 2417444,
+  "features": {
+    "sentence": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentiment": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "is_augmented": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "judge_score": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "judge_comment": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 8556897,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 4904987,
+      "num_examples": 7902,
+      "dataset_name": "financial_phrase_bank_augmented_judged"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 623908,
+      "num_examples": 988,
+      "dataset_name": "financial_phrase_bank_augmented_judged"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 610558,
+      "num_examples": 985,
+      "dataset_name": "financial_phrase_bank_augmented_judged"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

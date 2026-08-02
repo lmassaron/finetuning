@@ -21,6 +21,7 @@ uv pip install jupyter ipykernel tqdm
 uv pip install transformers peft trl accelerate bitsandbytes
 uv pip install datasets pandas matplotlib scikit-learn
 uv pip install unsloth
+uv pip install sentence-transformers "torchao>=0.16.0"
 
 python -m ipykernel install --user --name ch06 --display-name ".venv_ch06"
 

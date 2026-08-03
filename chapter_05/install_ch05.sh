@@ -16,11 +16,11 @@ echo "==> Creating venv: ch05 (Python 3.12)"
 uv venv .venv_ch05 --python 3.12
 source .venv_ch05/bin/activate
 
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130 || uv pip install torch torchvision
-uv pip install jupyter ipykernel tqdm unsloth torchao "optimum<2.0.0"
-uv pip install "transformers<5.0.0" "peft==0.14.0" accelerate "trl<0.12.0" liger-kernel
-uv pip install datasets BitsAndBytes pandas
-BUILD_CUDA_EXT=0 uv pip install auto-gptq --no-build-isolation
+uv pip install "torch==2.11.0" "torchvision==0.26.0" --index-url https://download.pytorch.org/whl/cu130 || uv pip install "torch==2.11.0" "torchvision==0.26.0"
+uv pip install "jupyter==1.1.1" "ipykernel==7.3.0" "tqdm==4.70.0" "unsloth==2026.8.1" "torchao==0.17.0" "optimum==1.27.0"
+uv pip install "transformers==4.57.6" "peft==0.14.0" "accelerate==1.14.0" "trl==0.11.4" "liger-kernel==0.8.1"
+uv pip install "datasets==4.3.0" "BitsAndBytes==0.50.0" "pandas==3.0.5"
+BUILD_CUDA_EXT=0 uv pip install "auto-gptq==0.7.1" --no-build-isolation
 uv pip uninstall -y gptqmodel || true
 
 

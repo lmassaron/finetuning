@@ -16,12 +16,12 @@ echo "==> Creating venv: ch08 (Python 3.12)"
 uv venv .venv_ch08 --python 3.12
 source .venv_ch08/bin/activate
 
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130 || uv pip install torch torchvision
-uv pip install jupyter ipykernel
-uv pip install transformers peft
+uv pip install "torch==2.11.0+cu130" "torchvision==0.26.0+cu130" --index-url https://download.pytorch.org/whl/cu130 || uv pip install "torch==2.11.0+cu130" "torchvision==0.26.0+cu130"
+uv pip install "jupyter==1.1.1" "ipykernel==7.2.0"
+uv pip install "transformers==5.8.0" "peft==0.19.1"
 uv pip install \
-    evaluate \
-    rouge_score \
-    bert_score \
+    "evaluate==0.4.6" \
+    "rouge_score==0.1.2" \
+    "bert_score==0.3.13" \
     git+https://github.com/google-research/bleurt.git \
-    lm-eval
+    "lm-eval==0.4.12"

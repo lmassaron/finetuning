@@ -16,12 +16,12 @@ echo "==> Creating venv: ch06 (Python 3.12)"
 uv venv .venv_ch06 --python 3.12
 source .venv_ch06/bin/activate
 
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130 || uv pip install torch torchvision
-uv pip install jupyter ipykernel tqdm 
-uv pip install transformers peft trl accelerate bitsandbytes
-uv pip install datasets pandas matplotlib scikit-learn
-uv pip install unsloth
-uv pip install sentence-transformers "torchao>=0.16.0" optimum
+uv pip install "torch==2.11.0" "torchvision==0.26.0" --index-url https://download.pytorch.org/whl/cu130 || uv pip install "torch==2.11.0" "torchvision==0.26.0"
+uv pip install "jupyter==1.1.1" "ipykernel==7.3.0" "tqdm==4.70.0" 
+uv pip install "transformers==5.5.0" "peft==0.20.0" "trl==0.24.0" "accelerate==1.14.0" "bitsandbytes==0.50.0"
+uv pip install "datasets==4.3.0" "pandas==3.0.5" "matplotlib==3.11.1" "scikit-learn==1.9.0"
+uv pip install "unsloth==2026.8.1"
+uv pip install "sentence-transformers==5.6.1" "torchao==0.17.0" "optimum==2.2.0"
 
 python -m ipykernel install --user --name ch06 --display-name ".venv_ch06"
 

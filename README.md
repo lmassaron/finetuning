@@ -1,4 +1,4 @@
-# finetuning
+# Fine-Tuning Large and Small Language Models (Tech Today)
 
 Fine-Tuning Large and Small Language Models walks practitioners through the complete pipeline for customizing open-source SLMs for domain-specific tasks. Written by Luca Massaron, a data scientist with 20+ years in data modelling and nearly a decade building NLP solutions with Transformer architectures, the book covers dataset preparation, synthetic data generation, base model selection from families including Gemma, Qwen, Phi, and Llama, and deployment on consumer-grade hardware.
 

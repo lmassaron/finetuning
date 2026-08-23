@@ -2,7 +2,7 @@ import os
 import re
 import subprocess
 
-chapters = ['04', '05', '06', '08', '09']
+chapters = ['04', '05', '06', '07', '08', '09']
 
 def get_frozen_deps(chapter):
     env_dir = f"chapter_{chapter}/.venv_ch{chapter}"

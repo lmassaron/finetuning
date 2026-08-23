@@ -18,7 +18,7 @@ source .venv_ch07/bin/activate
 
 uv pip install "torch==2.11.0" "torchvision==0.26.0" --index-url https://download.pytorch.org/whl/cu130 || uv pip install "torch==2.11.0" "torchvision==0.26.0"
 uv pip install "jupyter==1.1.1" "ipykernel==7.3.0" "tqdm==4.70.0"
-uv pip install "transformers==5.5.0" "peft==0.20.0" "trl==0.24.0" "accelerate==1.14.0" "bitsandbytes==0.50.0"
+uv pip install "transformers==4.57.6" "peft==0.20.0" "trl==0.24.0" "accelerate==1.14.0" "bitsandbytes==0.50.0"
 uv pip install "datasets==4.3.0" "pandas==3.0.5" "matplotlib==3.11.1"
 uv pip install "unsloth==2026.8.1"
 uv pip install "vllm==0.20.2"

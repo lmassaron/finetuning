@@ -1,4 +1,4 @@
-# Fine-Tuning Large and Small Language Models (Tech Today)
+# Fine-Tuning Large and Small Language Models <BR>(Wiley - Tech Today)
 
 <p align="center">
   <img src="cover.jpg" alt="Fine-Tuning Large and Small Language Models Cover" width="360"/>

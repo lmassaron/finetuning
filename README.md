@@ -33,6 +33,26 @@ Fine-Tuning Large and Small Language Models serves technical practitioners with 
 
 ---
 
+## Resource Summary
+
+The table below summarizes the empirical hardware requirements (benchmarked on an NVIDIA GeForce RTX 3090 24GB and AMD Ryzen 9 7950X, 125 GB RAM) for key GPU workloads across Chapters 04 to 10:
+
+| Chapter & Workload | Representative Model & Technique | Peak GPU VRAM | Peak Host RAM | Execution Time / Throughput | Status |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Ch 04**: Augmentation & QA | `Qwen/Qwen2.5-7B-Instruct` (4-bit NF4) | 6.74 GB | 2.45 GB | 16.5s load; ~0.70s / sample | PASSED |
+| **Ch 04**: Wikipedia vLLM Extraction | `Qwen2.5-7B-Instruct-AWQ` (vLLM) | 19.20 GB | 4.50 GB | ~25 min (536 articles) | PASSED |
+| **Ch 05**: PEFT SFT & 4-bit LoRA | `Qwen2.5-0.5B` & `7B-GPTQ` | 2.43 – 5.34 GB | 1.08 – 5.49 GB | 21.5s (SFT) / 60.8s (GPTQ) | PASSED |
+| **Ch 06**: SFT / Multimodal / Embed | `gemma-4-E2B-it`, `Phi-4-mini`, `Qwen2-VL` | 4.80 – 8.50 GB | 2.10 – 3.50 GB | ~6 – 20 min / full fine-tune | PASSED |
+| **Ch 07**: Preference Tuning (DPO) | `Qwen2.5-3B-Instruct` (PatchDPOTrainer) | 7.80 GB | 3.20 GB | ~25 min (120 steps) | PASSED |
+| **Ch 08**: Metrics & LLM-as-a-Judge | `gemma-3-270m` + `Qwen2.5-3B` Judge | 5.98 GB | 1.95 GB | 12.6s (10/10 Judge score) | PASSED |
+| **Ch 08**: GSM8K Benchmark | `phi-3-mini-4k-instruct` (LM-Eval) | 8.02 GB | 1.89 GB | 343.6s (80.00% exact match) | PASSED |
+| **Ch 09**: Model Merge & Quantization | `Mistral-7B-v0.1` float16 LoRA Merge | 14.31 GB | 1.48 GB | 5.85s | PASSED |
+| **Ch 09**: vLLM Quantized Serving | `vLLM` INT4 AWQ / GPTQ Serving | 19.20 – 21.60 GB | 4.50 – 8.50 GB | < 1s / batched query | PASSED |
+| **Ch 10**: Autonomous Multi-Adapter Agent | `Qwen3-4B` + Planner/Coder/Reviewer LoRAs | 3.84 GB | 3.37 GB | 87.6s init; ~60–80s / agent role | PASSED |
+| **Ch 10**: Multi-LoRA Training | `Qwen3-4B` 4-bit QLoRA Multi-Task | 5.80 – 6.50 GB | 4.20 GB | ~1.0 – 1.5 hrs (3 LoRAs) | PASSED |
+
+---
+
 ## How to Use the Code
 
 This codebase is designed to run seamlessly either on **Linux systems equipped with NVIDIA GPUs (CUDA)** or on **Apple Silicon Macs (M-series, using Metal Performance Shaders / MPS)**.

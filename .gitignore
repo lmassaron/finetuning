@@ -223,3 +223,11 @@ notebook_audit_report.html
 # Local scripts
 pin_versions.py
 
+# Training outputs & checkpoints
+trainer_output/
+dpo_test_output/
+merged-model*/
+my-lora-adapter/
+outputs_*/
+adapters/
+

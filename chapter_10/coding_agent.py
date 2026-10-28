@@ -210,7 +210,7 @@ def create_plan(manager, user_request):
         plan_prompt,
         system_prompt=(
             "You are a Senior Software Architect. Output only the execution "
-            "steps inside <plan>...</plan> tags without drafting commentary.",
+            "steps inside <plan>...</plan> tags without drafting commentary."
         ),
     )
     print(f"  Plan Output:\n{plan}\n")

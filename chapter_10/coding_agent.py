@@ -252,7 +252,7 @@ def execute_step(manager, step, context, max_retries=3):
             tool_prompt,
             system_prompt=(
                 "You are a strict tool-calling engine. To create or edit code, "
-                "call the write_file tool. Output JSON only.",
+                "call the write_file tool. Output JSON only."
             ),
         )
         try:

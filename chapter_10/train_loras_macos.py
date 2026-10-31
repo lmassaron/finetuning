@@ -161,10 +161,10 @@ def run_pipeline():
     model, tokenizer = prepare_base_model(MODEL_ID)
     planner_ds = load_dataset("Open-Orca/OpenOrca", split="train[:5000]")
     planner_ds = planner_ds.filter(lambda x: x["system_prompt"] != "")
-    planner_ds = planner_ds.select(range(min(1000, len(planner_ds))))
     planner_ds = planner_ds.map(
         format_planner_data, batched=True, remove_columns=planner_ds.column_names
     )
+    planner_ds = planner_ds.select(range(min(1000, len(planner_ds))))
     train_lora(model, tokenizer, planner_ds, "planner", f"{HF_USERNAME}/planner-lora")
     del (model, tokenizer, planner_ds)
     gc.collect()
